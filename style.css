@@ -1,0 +1,80 @@
+/* style.css — DRSS India metallic theme (black -> silver gradient) */
+:root{
+  --bg-dark:#0b0b0c;
+  --panel:#111214;
+  --silver1:#cfd8dc;
+  --silver2:#9aa6ad;
+  --accent:#b22222; /* subtle red */
+  --container:1100px;
+  --radius:10px;
+  --text:#e6e6e6;
+  --muted:#9aa6ad;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:linear-gradient(180deg,var(--bg-dark) 0%, #0f1112 40%, #111214 100%);color:var(--text);line-height:1.6}
+.container{max-width:var(--container);margin:0 auto;padding:2rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:999;background:linear-gradient(90deg, rgba(10,10,10,0.75), rgba(25,25,25,0.55));backdrop-filter: blur(4px);padding:0.75rem 0;box-shadow:0 2px 10px rgba(0,0,0,0.5)}
+.brand{font-weight:800;letter-spacing:1px;font-size:1.125rem;color:var(--silver1)}
+.brand .dot{color:var(--accent);margin-left:6px;font-weight:700}
+.nav a{color:var(--silver2);text-decoration:none;margin-left:1.2rem;font-weight:600}
+.nav a:hover{color:var(--silver1)}
+
+/* Hero */
+.hero{height:78vh;display:flex;align-items:center;justify-content:center;background-image:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;padding-top:3.5rem}
+.hero-inner{text-align:center;max-width:900px;padding:2rem;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+
+.hero h1{font-size:2.4rem;color:var(--silver1);margin-bottom:0.5rem;font-weight:800}
+.hero .sub{color:var(--muted);margin-bottom:1.25rem;font-weight:600}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.7rem 1rem;border-radius:8px;text-decoration:none;font-weight:700;border:2px solid transparent;transition:all .22s ease}
+.btn.primary{background:linear-gradient(90deg,#1f2933, #3a3f46);color:var(--silver1);border-color:rgba(255,255,255,0.06)}
+.btn.ghost{background:transparent;color:var(--silver2);border-color:rgba(255,255,255,0.06);margin-left:0.6rem}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(178,34,34,0.12);border-color:var(--accent);background:linear-gradient(90deg,#23272b,#3d4246)}
+.btn.ghost:hover{color:var(--silver1);border-color:rgba(255,255,255,0.12)}
+
+/* Sections */
+.section{padding:4rem 0}
+.section-title{font-size:1.4rem;color:var(--silver1);text-align:center;margin-bottom:1rem}
+
+/* Grid / Cards */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));padding:0;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);transition:transform .2s ease, box-shadow .2s ease}
+.card img{width:100%;height:200px;object-fit:cover;display:block}
+.card h3{padding:1rem;color:var(--silver1)}
+.card p{padding:0 1rem 1rem;color:var(--muted)}
+
+.card:hover{transform:translateY(-6px);box-shadow:0 15px 40px rgba(0,0,0,0.6)}
+
+/* Partners / Clients */
+.partners, .clients{background:linear-gradient(180deg, #0f1112, #0d0d0d);padding:2rem;border-top:1px solid rgba(255,255,255,0.02)}
+
+/* Services list */
+.services-list{list-style:none;max-width:800px;margin:0 auto;padding:0.5rem;color:var(--muted);display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem}
+.services-list li{padding:0.8rem 1rem;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+.contact-form label{display:block;margin-bottom:0.6rem;color:var(--silver2)}
+.contact-form input, .contact-form textarea{width:100%;padding:0.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:#0b0b0c;color:var(--silver1)}
+
+/* Footer */
+.site-footer{background:linear-gradient(90deg,#070707,#0d0d0d);padding:1.25rem 0;border-top:1px solid rgba(255,255,255,0.03)}
+
+/* Responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .header-inner{justify-content:space-between}
+  .hero h1{font-size:1.75rem}
+}
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr}
+  .hero{height:60vh;padding-top:4.5rem}
+  .hero-inner{padding:1rem}
+  .brand{font-size:1rem}
+  .site-header{padding:0.5rem 0}
+}

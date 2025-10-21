@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DRSS India — Precision Cast Iron Weights & Weighbridge Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">DRSS <span class="dot">INDIA</span></div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner container">
+        <h1>We are Weighing the Better Future.</h1>
+        <p class="sub">Your Trusted Partner in Weighing Excellence — Since @2001</p>
+        <div class="cta">
+          <a class="btn primary" href="#products">Explore Our Products</a>
+          <a class="btn ghost" href="#contact">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+      <h2 class="section-title">About Us</h2>
+      <p class="lead">Content coming soon — DRSS India is a trusted name in precision cast iron manufacturing and industrial weighing solutions. Our mission and legacy reflect quality, durability, and innovation.</p>
+    </section>
+
+    <section id="products" class="container section">
+      <h2 class="section-title">Our Products</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1616627452227-58d7c39c8c8b?auto=format&fit=crop&w=1200&q=80" alt="Cast Iron Test Weights">
+          <h3>Cast Iron Test Weights</h3>
+          <p>Precision-calibrated weights for testing & calibration — from 1kg to 5000kg.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1603354350317-6f7aaa5911c5?auto=format&fit=crop&w=1200&q=80" alt="Weighbridge">
+          <h3>Electronic Weighbridges</h3>
+          <p>Rugged weighbridges for industrial and logistics applications. Custom sizes available.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1618889481028-1b531b9c74e6?auto=format&fit=crop&w=1200&q=80" alt="Counter Weights">
+          <h3>Counter Weights</h3>
+          <p>Durable cast iron counterweights for cranes, elevators, and balancing solutions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="container section">
+      <h2 class="section-title">Our Services</h2>
+      <ul class="services-list">
+        <li>Calibration & Certification Assistance</li>
+        <li>Custom Weight Manufacturing</li>
+        <li>Weighbridge Installation & Maintenance</li>
+        <li>Short-Term & Long-Term Rentals</li>
+      </ul>
+    </section>
+
+    <section id="partners" class="container section partners">
+      <h2 class="section-title">Our Partners</h2>
+      <p><strong>Sandeep Enterprises</strong> (Serving since 2002)</p>
+      <p>Owner: <strong>Sandeep Deo</strong>, <strong>Snehal Deo</strong></p>
+    </section>
+
+    <section id="clients" class="container section clients">
+      <h2 class="section-title">Our Clients</h2>
+      <p>Trusted by <strong>Bosch</strong>, <strong>Glaxo</strong>, <strong>Nash Robotic</strong>, <strong>Siemens</strong>, <strong>ABB</strong>, and many more.</p>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Phone:</strong> +91 9823049643</p>
+          <p><strong>Email:</strong> <a href="mailto:info@drssindia.com">info@drssindia.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/drss-india" target="_blank">DRSS India</a></p>
+          <p><strong>Instagram:</strong> <a href="#" target="_blank">@drssindia_demo</a></p>
+          <p><strong>Address:</strong> DRSS India, Industrial Zone, Raipur, India</p>
+        </div>
+        <div>
+          <form class="contact-form" action="#" method="post" onsubmit="alert('Demo form — replace action with your backend or email handler'); return false;">
+            <label>Name <input type="text" name="name" required></label>
+            <label>Email <input type="email" name="email" required></label>
+            <label>Message <textarea name="message" rows="4" required></textarea></label>
+            <div><button class="btn primary" type="submit">Send Message</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 DRSS India. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        var target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+
+    // Mobile nav toggle
+    const nav = document.querySelector('.nav');
+    const brand = document.querySelector('.brand');
+    // basic responsive behavior handled in CSS; small script to add shadow on scroll
+    window.addEventListener('scroll', function(){
+      const header = document.querySelector('.site-header');
+      if(window.scrollY > 20) header.classList.add('scrolled'); else header.classList.remove('scrolled');
+    });
+  </script>
+</body>
+</html>
